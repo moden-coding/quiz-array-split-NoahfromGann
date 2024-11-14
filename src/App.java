@@ -1,5 +1,4 @@
 
-
 /* Complete methods: copyFrontAndBack and maxWordLength. 
  * DO NOT MODIFY THE MAIN METHOD!
  *
@@ -35,31 +34,48 @@
 import java.util.*;
 
 public class App {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
-        //copyFrontAndBack example
-        System.out.println("With input [1, 2, 3], you should get: [1, 3]. You got: " + Arrays.toString(copyFrontAndBack(new int[]{1,2,3})));
-        System.out.println("With input [1, 2, 3, 4], you should get: [1, 4]. You got: " + Arrays.toString(copyFrontAndBack(new int[]{1,2,3,4})));
-        System.out.println("With input [7], you should get: [7, 7]. You got: " + Arrays.toString(copyFrontAndBack(new int[]{7})));
-        
-        //wordLength example
+        // copyFrontAndBack example
+        System.out.println("With input [1, 2, 3], you should get: [1, 3]. You got: "
+                + Arrays.toString(copyFrontAndBack(new int[] { 1, 2, 3 })));
+        System.out.println("With input [1, 2, 3, 4], you should get: [1, 4]. You got: "
+                + Arrays.toString(copyFrontAndBack(new int[] { 1, 2, 3, 4 })));
+        System.out.println("With input [7], you should get: [7, 7]. You got: "
+                + Arrays.toString(copyFrontAndBack(new int[] { 7 })));
+
+        // wordLength example
         System.out.println("With input \"Java is fun\" you should return 4. You got: " + maxWordLength("Java is fun"));
-        System.out.println("With input \"Java is scary\" you should return 5. You got: " + maxWordLength("Java is scary"));
-        System.out.println("With input \"I can do this\" you should return 4. You got: " + maxWordLength("I can do this"));
+        System.out.println(
+                "With input \"Java is scary\" you should return 5. You got: " + maxWordLength("Java is scary"));
+        System.out.println(
+                "With input \"I can do this\" you should return 4. You got: " + maxWordLength("I can do this"));
     }
 
-    public static int[] copyFrontAndBack(int[] nums){
+    public static int[] copyFrontAndBack(int[] nums) {
 
-        return null; //this is a placeholder
+        int length = Math.min(2, nums.length);
+
+        int[] result = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            result[i] = nums[i];
+        }
+
+        return result;
+
+        // this is a placeholder
 
     }
 
     public static int maxWordLength(String sentence){
+        String[] split = sentence.split(" ");
 
+         String maxWordLength = [maxWordLength(length)];
 
-        return -1; //this is a placeholder
+        return split.length;
+
+        // this is a placeholder
     }
-
-
 
 }
